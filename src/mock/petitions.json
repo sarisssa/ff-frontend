@@ -1,0 +1,65 @@
+[
+  {
+    "creator": {
+      "name": "ToTheMoon",
+      "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2XZ2KalqgA3G17W2cuY2VmJozxXKzK3XNo6wj9I41SA&s"
+    },
+    "message": "We want a @RTJ + @Supreme collab!",
+    "location": "Atlanta GA",
+    "petitionee": {
+      "name": "Run the Jewels",
+      "profilePic": "https://upload.wikimedia.org/wikipedia/en/2/20/Run_the_jewels_ep_album_cover.jpg"
+    },
+    "description": "Run the Jewels Supreme Collection",
+    "fee": 20,
+    "publicationDate": "2023-08-01T00:00:00.000Z",
+    "deadline": "2023-09-15T00:00:00.000Z",
+    "coverImage": "https://petapixel.com/assets/uploads/2022/08/fdfs11-800x533.jpg",
+    "numPetitioners": 200,
+    "numRetweets": 200,
+    "numComments": 200,
+    "numLikes": 200
+  },
+  {
+    "creator": {
+      "name": "Jane Smith",
+      "profilePic": "https://images.immediate.co.uk/production/volatile/sites/23/2010/07/GettyImages-160869327-0f0732f.jpg"
+    },
+    "message": "Support local schools",
+    "location": "Various",
+    "petitionee": {
+      "name": "Nike",
+      "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSThX0Uerp463ihIzZkClx6mw6r9JC0mO_fww&usqp=CAU"
+    },
+    "description": "Help us raise awareness about schools",
+    "fee": 50,
+    "publicationDate": "2023-07-15T00:00:00.000Z",
+    "deadline": "2023-09-30T00:00:00.000Z",
+    "coverImage": "https://petapixel.com/assets/uploads/2022/08/fdfs11-800x533.jpg",
+    "numPetitioners": 200,
+    "numRetweets": 200,
+    "numComments": 200,
+    "numLikes": 200
+  },
+  {
+    "creator": {
+      "name": "Alex Johnson",
+      "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSThX0Uerp463ihIzZkClx6mw6r9JC0mO_fww&usqp=CAU"
+    },
+    "message": "Save our environment",
+    "location": "Global",
+    "petitionee": {
+      "name": "Jan Smit",
+      "profilePic": "https://media.newyorker.com/photos/62c4511e47222e61f46c2daa/4:3/w_2663,h_1997,c_limit/shouts-animals-watch-baby-hemingway.jpg"
+    },
+    "description": "Join us in advocating for change",
+    "fee": 30,
+    "publicationDate": "2023-08-10T00:00:00.000Z",
+    "deadline": "2023-10-10T00:00:00.000Z",
+    "coverImage": "https://petapixel.com/assets/uploads/2022/08/fdfs11-800x533.jpg",
+    "numPetitioners": 200,
+    "numRetweets": 200,
+    "numComments": 200,
+    "numLikes": 200
+  }
+]

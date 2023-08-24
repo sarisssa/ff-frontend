@@ -1,3 +1,3 @@
-export default function Petitions() {
+export default async function Petitions() {
   return <main></main>;
 }
