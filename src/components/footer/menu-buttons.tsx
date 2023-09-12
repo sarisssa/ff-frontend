@@ -17,12 +17,12 @@ export const menuButtons = [
   },
   {
     icon: <MdOutlinePostAdd />,
-    text: "Petitions",
+    text: "Campaigns",
     url: "/petitions",
   },
   {
     icon: <TfiWallet />,
-    text: "Wallet",
+    text: "Passes",
     url: "/wallet",
   },
   {

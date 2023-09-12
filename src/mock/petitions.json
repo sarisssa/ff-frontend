@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "creator": {
       "name": "ToTheMoon",
       "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2XZ2KalqgA3G17W2cuY2VmJozxXKzK3XNo6wj9I41SA&s"
@@ -18,9 +19,31 @@
     "numPetitioners": 200,
     "numRetweets": 200,
     "numComments": 200,
-    "numLikes": 200
+    "numLikes": 200,
+    "signatoryPreviewList": [
+      {
+        "name": "Nike",
+        "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSThX0Uerp463ihIzZkClx6mw6r9JC0mO_fww&usqp=CAU"
+      },
+      {
+        "name": "Dave",
+        "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSThX0Uerp463ihIzZkClx6mw6r9JC0mO_fww&usqp=CAU"
+      },
+      {
+        "name": "HappyUser",
+        "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSThX0Uerp463ihIzZkClx6mw6r9JC0mO_fww&usqp=CAU"
+      }
+    ],
+    "currentSignatories": 20,
+    "totalSignatories": 250,
+    "currentFundedAmount": 40000,
+    "goalAmount": 50000,
+    "nPetitionReports": 9,
+    "nPetitionComments": 9,
+    "nPetitionActivities": 20
   },
   {
+    "id": "2",
     "creator": {
       "name": "Jane Smith",
       "profilePic": "https://images.immediate.co.uk/production/volatile/sites/23/2010/07/GettyImages-160869327-0f0732f.jpg"
@@ -39,9 +62,31 @@
     "numPetitioners": 200,
     "numRetweets": 200,
     "numComments": 200,
-    "numLikes": 200
+    "numLikes": 200,
+    "signatoryPreviewList": [
+      {
+        "name": "Nike",
+        "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSThX0Uerp463ihIzZkClx6mw6r9JC0mO_fww&usqp=CAU"
+      },
+      {
+        "name": "Dave",
+        "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSThX0Uerp463ihIzZkClx6mw6r9JC0mO_fww&usqp=CAU"
+      },
+      {
+        "name": "HappyUser",
+        "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSThX0Uerp463ihIzZkClx6mw6r9JC0mO_fww&usqp=CAU"
+      }
+    ],
+    "currentSignatories": 20,
+    "totalSignatories": 250,
+    "currentFundedAmount": 40000,
+    "goalAmount": 50000,
+    "nPetitionReports": 9,
+    "nPetitionComments": 9,
+    "nPetitionActivities": 20
   },
   {
+    "id": "3",
     "creator": {
       "name": "Alex Johnson",
       "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSThX0Uerp463ihIzZkClx6mw6r9JC0mO_fww&usqp=CAU"
@@ -60,6 +105,27 @@
     "numPetitioners": 200,
     "numRetweets": 200,
     "numComments": 200,
-    "numLikes": 200
+    "numLikes": 200,
+    "signatoryPreviewList": [
+      {
+        "name": "Nike",
+        "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSThX0Uerp463ihIzZkClx6mw6r9JC0mO_fww&usqp=CAU"
+      },
+      {
+        "name": "Dave",
+        "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSThX0Uerp463ihIzZkClx6mw6r9JC0mO_fww&usqp=CAU"
+      },
+      {
+        "name": "HappyUser",
+        "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSThX0Uerp463ihIzZkClx6mw6r9JC0mO_fww&usqp=CAU"
+      }
+    ],
+    "currentSignatories": 20,
+    "totalSignatories": 250,
+    "currentFundedAmount": 40000,
+    "goalAmount": 50000,
+    "nPetitionReports": 9,
+    "nPetitionComments": 9,
+    "nPetitionActivities": 20
   }
 ]
