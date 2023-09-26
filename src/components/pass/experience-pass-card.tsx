@@ -1,11 +1,11 @@
-import { Pass } from "@/lib/types";
+import { ExperiencePassCardDetails } from "@/lib/types";
 import Image from "next/image";
 
 interface Props {
-  pass: Pass;
+  pass: ExperiencePassCardDetails;
 }
 
-export const PassCard = ({ pass }: Props) => {
+export const ExperiencePassCard = ({ pass }: Props) => {
   const { imgUrl, producerName, experienceTitle, experienceDate } = pass;
 
   return (

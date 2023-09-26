@@ -14,6 +14,7 @@ export default function Activity() {
         ItemComponent={({ data: activity }) => (
           <ActivityCard activity={activity} />
         )}
+        showNotification
       />
     </main>
   );

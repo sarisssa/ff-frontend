@@ -77,7 +77,6 @@ export default async function PetitionDetails({ params: { id } }: Props) {
         </div>
         <div className="flex gap-4 my-3">
           <div className="flex flex-grow-1 flex-shrink-0">
-            {" "}
             {signatoryPreviewList.map(({ profilePic, name }, idx) => (
               <Image
                 className="rounded-full aspect-square -mr-3"
@@ -123,18 +122,3 @@ export default async function PetitionDetails({ params: { id } }: Props) {
     </div>
   );
 }
-
-//Can we componetize tabs?
-
-//Bottom buttons, use vw to set width?
-
-//Padding to push text left?
-
-//How to implement see more? (useState)
-
-//Section Div
-//Header Div
-//H3
-//Crown Div
-//Para
-//Div of buttons

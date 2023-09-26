@@ -10,6 +10,7 @@ interface Props<T> {
   }[];
   ItemComponent: ComponentType<{ data: T }>;
   listClassName?: string;
+  showNotification?: boolean;
 }
 
 // Where ever filterList is used, make parent client component
@@ -19,6 +20,7 @@ export function FilterList<T>({
   filters,
   ItemComponent: FilterComponent,
   listClassName,
+  showNotification,
 }: Props<T>) {
   const [activeFilter, setActiveFilter] = useState(filters[0].title);
   // Find the actual filter function
@@ -34,7 +36,6 @@ export function FilterList<T>({
           const filteredLength = itemData.filter((dataEntry) =>
             filter.filterFn(dataEntry)
           ).length;
-
           return (
             <button
               onClick={() => setActiveFilter(filter.title)}
@@ -46,9 +47,12 @@ export function FilterList<T>({
               key={filter.title}
             >
               <span>{filter.title}</span>
-              <span className="bg-gray-600 rounded-full text-white px-2 aspect-square">
-                {filteredLength}
-              </span>
+
+              {showNotification && (
+                <span className="bg-gray-600 rounded-full text-white px-2 aspect-square">
+                  {filteredLength}
+                </span>
+              )}
             </button>
           );
         })}

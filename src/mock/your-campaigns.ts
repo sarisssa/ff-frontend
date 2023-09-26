@@ -79,11 +79,11 @@ export const mockFilters: Filter<ExperiencePassCardDetails>[] = [
     filterFn: () => true,
   },
   {
-    title: "Petition NFTs",
-    filterFn: (data) => data.category === "Petition NFT",
+    title: "Created by You",
+    filterFn: (data) => data.category === "Created by You",
   },
   {
-    title: "Experience NFTs",
-    filterFn: (data) => data.category === "Experience NFT",
+    title: "Signed by You",
+    filterFn: (data) => data.category === "Signed by You",
   },
 ];

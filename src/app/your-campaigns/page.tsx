@@ -1,11 +1,11 @@
 "use client";
 
-import { ExperiencePassCard } from "@/components/pass/experience-pass-card";
+import CampaignCard from "@/components/campaign/campaign-card";
 import { FilterList } from "@/components/ui/filter-list";
-import { mockFilters, mockPasses } from "@/mock/pass";
+import { mockFilters, mockPasses } from "@/mock/your-campaigns";
 import Image from "next/image";
 
-export default function Passes() {
+export default function YourCampaigns() {
   return (
     <main className="px-4">
       <div className="flex flex-col">
@@ -19,7 +19,7 @@ export default function Passes() {
             height={40}
             alt=""
           />
-          <h3>Your Experience Passes</h3>
+          <h1>Your Campaigns</h1>
         </div>
         <span>48% to the way to micro influencer!</span>
         <progress className="progress" value={48} max={100} />
@@ -28,7 +28,7 @@ export default function Passes() {
         listClassName="grid grid-cols-2 gap-3"
         itemData={mockPasses}
         filters={mockFilters}
-        ItemComponent={({ data: pass }) => <ExperiencePassCard pass={pass} />}
+        ItemComponent={({ data: pass }) => <CampaignCard />}
         showNotification
       />
     </main>

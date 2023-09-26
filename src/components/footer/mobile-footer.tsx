@@ -8,7 +8,7 @@ export default function MobileFooter() {
   const pathname = usePathname();
 
   return (
-    <footer className="fixed bottom-0 w-full h-16 bg-white flex justify-around items-center text-2xl">
+    <footer className="fixed bottom-0 w-full h-16 bg-white flex justify-around items-center text-2xl border-t border-[ff-dark-gray]-500">
       {menuButtons.map((menuButton, idx) => (
         <MobileButton
           {...menuButton}
