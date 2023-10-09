@@ -67,7 +67,7 @@ export default function ExperienceNFT() {
                   </div>
                 </label>
                 <Button onClick={handleNextStep}>Next</Button>
-                <Button type="secondary" onClick={handleNextStep}>
+                <Button type="border" onClick={handleNextStep}>
                   Skip
                 </Button>
               </div>
@@ -89,7 +89,7 @@ export default function ExperienceNFT() {
                   Option 3
                 </label>
                 <Button onClick={handleNextStep}>Next</Button>
-                <Button type="secondary" onClick={handlePrevStep}>
+                <Button type="border" onClick={handlePrevStep}>
                   Back
                 </Button>
               </div>
@@ -110,7 +110,7 @@ export default function ExperienceNFT() {
                   />
                 </div>
                 <Button onClick={handleNextStep}>Finish</Button>
-                <Button type="secondary" onClick={handlePrevStep}>
+                <Button type="border" onClick={handlePrevStep}>
                   Back
                 </Button>
               </div>

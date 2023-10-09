@@ -7,14 +7,9 @@ import { mockFilters, mockPasses } from "@/mock/user-profile";
 import Image from "next/image";
 
 export default function UserProfile() {
-  const backgroundImageStyling = {
-    backgroundImage: `url('https://placehold.co/500x145')`,
-    backgroundSize: "cover",
-    height: "145px",
-  };
   return (
     <>
-      <div className="bg" style={backgroundImageStyling}></div>
+      <div className="bg-cover bg-[url('https://placehold.co/500x145')] h-[145px]"></div>
       <main className="px-4">
         <div className="flex justify-between items-end mb-3">
           <div className="w-24 h-24 relative mt-[-50px]">
@@ -54,7 +49,7 @@ export default function UserProfile() {
         </div>
         <div className="flex justify-evenly my-5 gap-5 text-center">
           <Button>Edit profile</Button>
-          <Button type={"secondary"}>Share profile</Button>
+          <Button type={"border"}>Share profile</Button>
         </div>
         <FilterList
           listClassName="grid grid-cols-3 gap-2"

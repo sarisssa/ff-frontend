@@ -4,12 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 const Header = () => (
   <header className="flex justify-between items-center gap-4 py-4 px-4 lg:px-8">
-    <Image
-      src="/images/header-stock-image.jpeg"
-      width={50}
-      height={50}
-      alt="FF Logo"
-    />
+    <Image src="/images/ff-logo.png" width={50} height={50} alt="FF Logo" />
     <div className="input-group justify-center">
       <input
         type="text"

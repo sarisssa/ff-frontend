@@ -1,7 +1,8 @@
+import clsx from "clsx";
 import { PropsWithChildren } from "react";
 
 interface Props {
-  type?: "primary" | "secondary";
+  type?: "primary" | "border" | "secondary";
   className?: string;
   onClick?: () => void;
 }
@@ -14,11 +15,12 @@ export default function Button({
 }: PropsWithChildren<Props>) {
   return (
     <button
-      className={`${
-        type === "primary"
-          ? "bg-ff-dark-gray text-white hover:brightness-90"
-          : "bg-ff-gray text-ff-dark-gray hover:brightness-90"
-      } px-2 py-3 whitespace-nowrap w-[100%] ${className}`}
+      className={clsx("px-1 py-2 whitespace-nowrap w-full", className, {
+        "bg-ff-dark-gray text-white hover:brightness-90": type === "primary",
+        "bg-ff-gray text-ff-dark-gray hover:brightness-90 border-2 border-ff-dark-gray":
+          type === "border",
+        "text-ff-dark-gray bg-ff-border-light": type === "secondary",
+      })}
       onClick={onClick}
     >
       {children}

@@ -19,13 +19,13 @@ export default function YourCampaigns() {
             height={40}
             alt=""
           />
-          <h1>Your Campaigns</h1>
+          <h1 className="text-2xl ml-4">Your Campaigns</h1>
         </div>
-        <span>48% to the way to micro influencer!</span>
-        <progress className="progress" value={48} max={100} />
+        <span className="mb-4">48% to the way to micro influencer!</span>
+        <progress className="progress mb-4" value={48} max={100} />
       </div>
       <FilterList
-        listClassName="grid grid-cols-2 gap-3"
+        listClassName="grid grid-cols-1 gap-3"
         itemData={mockPasses}
         filters={mockFilters}
         ItemComponent={({ data: pass }) => <CampaignCard />}

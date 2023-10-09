@@ -2,6 +2,11 @@
 
 import Button from "@/components/ui/button";
 import { useState } from "react";
+import { AiOutlineWallet } from "react-icons/ai";
+import { BiSolidBadgeDollar } from "react-icons/bi";
+import { BsFillTagsFill } from "react-icons/bs";
+import { CiCreditCard2 } from "react-icons/ci";
+import { IoMdArrowBack } from "react-icons/io";
 
 export default function OrderSummary() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -13,7 +18,10 @@ export default function OrderSummary() {
 
   return (
     <div className="flex flex-col px-4">
-      <h1 className="text-[40px] font-bold mb-5">Order Summary</h1>
+      <div className="flex items-center">
+        <IoMdArrowBack />
+        <h1 className="text-[40px] font-bold mb-5">Order Summary</h1>
+      </div>
       <div className="flex gap-5">
         <div id="image" className="h-[110px] w-[30%]">
           <img
@@ -24,13 +32,16 @@ export default function OrderSummary() {
         </div>
         <div className="flex flex-col w-[70%] justify-center">
           <div className="flex justify-between">
-            <div>
-              Larry June <span>$</span>
+            <div className="font-bold flex items-center gap-1">
+              LarryJune
+              <BiSolidBadgeDollar />
             </div>
             <span>Pencil icon</span>
           </div>
           <p>Meet and Greet in Oakland</p>
-          <div>200 Dollars</div>
+          <div className="font-bold flex items-center gap-1">
+            <BsFillTagsFill /> $200
+          </div>
         </div>
       </div>
       <div className="flex justify-between font-bold my-5">
@@ -48,10 +59,11 @@ export default function OrderSummary() {
           placeholder="Your name"
         />
         <label htmlFor="card-holder">Card number</label>
+        <CiCreditCard2 />
         <input
           className="block w-[100%] bg-ff-gray p-3 mt-1 mb-5 font-medium"
           id="card-holder"
-          type="text"
+          type="number"
           placeholder="XXXX XXXX XXXX XXXX"
         />
         <div className="flex gap-4">
@@ -59,7 +71,7 @@ export default function OrderSummary() {
             <span>Valid until</span>
             <input
               className="block w-[100%] bg-ff-gray p-3 mt-1 mb-5 font-medium"
-              type="text"
+              type="number"
               placeholder="MM/YYYY"
             />
           </div>
@@ -67,7 +79,7 @@ export default function OrderSummary() {
             <span>Security Code</span>
             <input
               className="block w-[100%] bg-ff-gray p-3 mt-1 mb-5 font-medium"
-              type="text"
+              type="number"
               placeholder="***"
             />
           </div>
@@ -84,7 +96,10 @@ export default function OrderSummary() {
             Use as default payment method{" "}
           </span>
         </div>
-        <Button className="text-xl">Pay 200 to Join Campaign</Button>
+        <Button className="text-xl flex justify-center items-center gap-1">
+          <AiOutlineWallet />
+          Pay $200 to Join Campaign
+        </Button>
       </form>
     </div>
   );

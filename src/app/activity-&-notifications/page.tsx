@@ -7,6 +7,7 @@ import { mockData, mockFilters } from "@/mock/activities";
 export default function Activity() {
   return (
     <main className="px-4">
+      <h1 className="text-2xl ml-4 font-bold">Activities & Notifications</h1>
       <FilterList
         listClassName="flex flex-col gap-2"
         itemData={mockData}

@@ -1,7 +1,9 @@
 import { getPetitionDetails } from "@/clients/petitions/get-petition-details";
 import PetitioneeDetails from "@/components/petitionee-details";
+import PetitionFilterList from "@/components/petitions/petition-filter-list";
 import Button from "@/components/ui/button";
 import Image from "next/image";
+import { MdLocationOn } from "react-icons/md";
 import { PiScrollDuotone } from "react-icons/pi";
 import { TbTargetArrow } from "react-icons/tb";
 
@@ -65,9 +67,11 @@ export default async function PetitionDetails({ params: { id } }: Props) {
             <span>Signatures Available</span>
           </span>
         </div>
-        <div className="flex gap-2">
+        <div className="flex items-center gap-1">
+          <MdLocationOn />
           <span>{location}</span>
           <span>
+            Created:
             {publicationDate.toLocaleString("en-US", {
               year: "numeric",
               month: "long",
@@ -109,15 +113,16 @@ export default async function PetitionDetails({ params: { id } }: Props) {
             max={50000}
           />
         </div>
-        <div className="border border-sky-500">
+        <div className="border">
           <h1 className="text-xl	font-semibold">About the Campaign</h1>
           <span>{`Created by: ${creator.name}`}</span>
           <p>{description}</p>
-          <div className="flex justify-around">
-            <Button>Join this Campaign</Button>
-            <Button type={"secondary"}>Share</Button>
-          </div>
         </div>
+        <PetitionFilterList />
+      </div>
+      <div className="flex justify-around">
+        <Button>Join this Campaign</Button>
+        <Button type={"border"}>Share</Button>
       </div>
     </div>
   );

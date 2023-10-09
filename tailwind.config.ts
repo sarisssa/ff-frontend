@@ -17,6 +17,7 @@ const config: Config = {
         "primary-content": "#000000",
         "ff-gray": "#f8f9fa",
         "ff-dark-gray": "#555e6d",
+        "ff-border-light": "#f3f4f6",
       },
     },
   },

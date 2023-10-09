@@ -1,6 +1,7 @@
 import { getTimeRemaining } from "@/lib/get-time-remaining";
 import { Petition } from "@/lib/types";
 import Image from "next/image";
+import { BiSolidBadgeDollar } from "react-icons/bi";
 import { ImPriceTags } from "react-icons/im";
 import { PiScrollDuotone } from "react-icons/pi";
 import Button from "./ui/button";
@@ -29,7 +30,7 @@ export default function PetitioneeDetails({
       </div>
 
       <div className="flex items-center gap-2 bg-white rounded p-2">
-        <div className="w-24 h-24 relative flex-grow flex-shrink-0">
+        <div className="w-20 h-20 relative flex-shrink-0">
           <Image
             className="rounded-full"
             src={petitionee.profilePic}
@@ -38,7 +39,10 @@ export default function PetitioneeDetails({
           ></Image>
         </div>
         <div>
-          <span className="font-bold">{petitionee.name}</span>
+          <div className="flex items-center gap-1">
+            <span className="font-bold">{petitionee.name}</span>
+            <BiSolidBadgeDollar />
+          </div>
           <span className="block mb-2">{description}</span>
           <span className="flex justify-between">
             <span className="flex items-center gap-1">
@@ -48,14 +52,17 @@ export default function PetitioneeDetails({
             <span>{getTimeRemaining(deadline)}</span>
           </span>
           <div className="flex items-center gap-2 justify-between text-[.8rem]">
-            <Button type="secondary">
-              <div className="text-xl">
+            <Button
+              className="flex items-center justify-center gap-2"
+              type="secondary"
+            >
+              <div className="text-xl inline-block">
                 <PiScrollDuotone />
               </div>
               Following
             </Button>
-            <Button>
-              <div className="text-xl">
+            <Button className="flex items-center justify-center gap-2">
+              <div className="text-xl inline-block">
                 <PiScrollDuotone />
               </div>
               Join Petition

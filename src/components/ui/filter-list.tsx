@@ -6,7 +6,7 @@ interface Props<T> {
   itemData: T[];
   filters: {
     title: string;
-    filterFn: (data: T) => boolean;
+    filterFn?: (data: T) => boolean;
   }[];
   ItemComponent: ComponentType<{ data: T }>;
   listClassName?: string;
@@ -31,11 +31,12 @@ export function FilterList<T>({
 
   return (
     <section>
-      <header className="flex justify-between">
+      <header className="flex justify-between text-sm">
         {filters.map((filter) => {
           const filteredLength = itemData.filter((dataEntry) =>
-            filter.filterFn(dataEntry)
+            filter.filterFn?.(dataEntry)
           ).length;
+
           return (
             <button
               onClick={() => setActiveFilter(filter.title)}
@@ -48,7 +49,7 @@ export function FilterList<T>({
             >
               <span>{filter.title}</span>
 
-              {showNotification && (
+              {showNotification && filter.filterFn && (
                 <span className="bg-gray-600 rounded-full text-white px-2 aspect-square">
                   {filteredLength}
                 </span>

@@ -57,6 +57,8 @@ export type UntransformedPetitionDetails = UntransformedPetition & {
   nPetitionReports: number;
   nPetitionComments: number;
   nPetitionActivities: number;
+  activities: CampaignActivity[];
+  comments: { event: "comment"; value: string }[];
 };
 
 export type PetitionDetails = Modify<
@@ -66,6 +68,28 @@ export type PetitionDetails = Modify<
     deadline: Date;
   }
 >;
+
+export type CampaignActivity =
+  | {
+      event: "user-joined";
+      user: {
+        name: string;
+        profilePic: string;
+      };
+      createdAt: Date;
+    }
+  | {
+      event: "new-petition-milestone";
+      imgUrl: string;
+      currentReach: number;
+      createdAt: Date;
+    }
+  | {
+      event: "petition-created";
+      // imgUrl: string;
+      // currentReach: number;
+      // createdAt: Date;
+    };
 
 export interface Activity {
   imgUrl: string;
@@ -103,5 +127,5 @@ export interface ProfileCardDetail {
 
 export interface Filter<T> {
   title: string;
-  filterFn: (data: T) => boolean;
+  filterFn?: (data: T) => boolean;
 }
