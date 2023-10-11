@@ -5,7 +5,7 @@ import {
   UntransformedPetitionDetails,
 } from "../types";
 
-export const transformPetition = ({
+export const transformCampaign = ({
   publicationDate,
   deadline,
   ...rest
@@ -17,11 +17,11 @@ export const transformPetition = ({
   };
 };
 
-export const transformPetitionDetails = (
+export const transformCampaignDetails = (
   petition: UntransformedPetitionDetails
 ): PetitionDetails => {
   return {
     ...petition,
-    ...transformPetition(petition),
+    ...transformCampaign(petition),
   };
 };

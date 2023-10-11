@@ -1,8 +1,8 @@
-import { getPetitions } from "@/clients/petitions/get-petitions";
-import PetitionList from "@/components/petitions/petition-list";
+import { getCampaigns } from "@/clients/petitions/get-campaigns";
+import PetitionList from "@/components/campaigns/petition-list";
 
 export default async function Home() {
-  const petitions = await getPetitions();
+  const petitions = await getCampaigns();
 
   return (
     <main>

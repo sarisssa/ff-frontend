@@ -57,8 +57,8 @@ export type UntransformedPetitionDetails = UntransformedPetition & {
   nPetitionReports: number;
   nPetitionComments: number;
   nPetitionActivities: number;
-  activities: CampaignActivity[];
-  comments: { event: "comment"; value: string }[];
+  // activities: CampaignActivity[];
+  // comments: { event: "comment"; value: string }[];
 };
 
 export type PetitionDetails = Modify<

@@ -1,18 +1,19 @@
-import { getPetitionDetails } from "@/clients/petitions/get-petition-details";
+import { getCampaignDetails } from "@/clients/petitions/get-campaign-details";
 import PetitioneeDetails from "@/components/petitionee-details";
-import PetitionFilterList from "@/components/petitions/petition-filter-list";
 import Button from "@/components/ui/button";
+import { SeeMore } from "@/components/ui/see-more";
 import Image from "next/image";
 import { MdLocationOn } from "react-icons/md";
 import { PiScrollDuotone } from "react-icons/pi";
-import { TbTargetArrow } from "react-icons/tb";
+import { SlSpeech } from "react-icons/sl";
+import { TbLocationFilled, TbTargetArrow } from "react-icons/tb";
 
 interface Props {
   params: { id: string };
 }
 
 export default async function PetitionDetails({ params: { id } }: Props) {
-  const petitionDetails = await getPetitionDetails(id);
+  const petitionDetails = await getCampaignDetails(id);
 
   if (!petitionDetails) return <p>This petition does not exist</p>;
 
@@ -113,16 +114,26 @@ export default async function PetitionDetails({ params: { id } }: Props) {
             max={50000}
           />
         </div>
-        <div className="border">
+        <div className="border px-2 pt-2 mb-5">
           <h1 className="text-xl	font-semibold">About the Campaign</h1>
-          <span>{`Created by: ${creator.name}`}</span>
-          <p>{description}</p>
+          <span>
+            {`Created by: `}
+            <span>{creator.name}</span>
+          </span>
+          <SeeMore>{description}</SeeMore>
         </div>
-        <PetitionFilterList />
       </div>
-      <div className="flex justify-around">
-        <Button>Join this Campaign</Button>
-        <Button type={"border"}>Share</Button>
+      <div className="flex justify-around gap-1">
+        <Button className="flex justify-center items-center basis-[65%] gap-1">
+          <SlSpeech />
+          Join this Campaign
+        </Button>
+        <Button
+          className="flex justify-center items-center basis-1/4 gap-1"
+          type={"border"}
+        >
+          <TbLocationFilled /> Share
+        </Button>
       </div>
     </div>
   );

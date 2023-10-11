@@ -1,4 +1,4 @@
-import { getPetitionDetails } from "@/clients/petitions/get-petition-details";
+import { getCampaignDetails } from "@/clients/petitions/get-campaign-details";
 import Button from "@/components/ui/button";
 import Image from "next/image";
 import { BsCheckCircle, BsPatchCheck } from "react-icons/bs";
@@ -10,7 +10,7 @@ interface Props {
 }
 
 export default async function PaymentSuccessful({ params: { id } }: Props) {
-  const petitionDetails = await getPetitionDetails(id);
+  const petitionDetails = await getCampaignDetails(id);
 
   if (!petitionDetails) return <p>This petition does not exist</p>;
 

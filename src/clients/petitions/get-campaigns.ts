@@ -1,9 +1,9 @@
-import petitions from "../../mock/petitions.json";
+import campaigns from "../../mock/campaigns.json";
 
-export const getPetitions = async () => {
+export const getCampaigns = async () => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
-  return petitions.map(({ publicationDate, deadline, ...rest }) => ({
+  return campaigns.map(({ publicationDate, deadline, ...rest }) => ({
     ...rest,
     publicationDate: new Date(publicationDate),
     deadline: new Date(deadline),
