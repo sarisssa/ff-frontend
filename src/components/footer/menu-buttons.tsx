@@ -13,21 +13,21 @@ export const menuButtons = [
   {
     icon: <BsLightning />,
     text: "Activity",
-    url: "/activity",
+    url: "/activity-&-notifications",
   },
   {
     icon: <MdOutlinePostAdd />,
     text: "Campaigns",
-    url: "/petitions",
+    url: "/your-campaigns",
   },
   {
     icon: <TfiWallet />,
     text: "Passes",
-    url: "/wallet",
+    url: "/passes",
   },
   {
     icon: <BsPerson />,
     text: "Profile",
-    url: "/profile",
+    url: "/user-profile",
   },
 ] as const;

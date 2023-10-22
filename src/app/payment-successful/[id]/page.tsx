@@ -1,7 +1,7 @@
 import { getCampaignDetails } from "@/clients/petitions/get-campaign-details";
 import Button from "@/components/ui/button";
 import Image from "next/image";
-import { BsCheckCircle, BsPatchCheck } from "react-icons/bs";
+import { BsCheckCircle } from "react-icons/bs";
 import { MdPeopleOutline } from "react-icons/md";
 import { TbLocationFilled } from "react-icons/tb";
 
@@ -73,7 +73,7 @@ export default async function PaymentSuccessful({ params: { id } }: Props) {
             </div>
           </div>
           <div className="p-3">
-            <div>
+            {/* <div>
               <div className="flex items-center gap-1">
                 <BsPatchCheck />
                 <span className="font-bold">48% </span>of the way to
@@ -81,8 +81,7 @@ export default async function PaymentSuccessful({ params: { id } }: Props) {
                 influencer!
               </div>
               <progress className="progress" value={48} max={100} />
-            </div>
-            <div id="progress bar"></div>
+            </div> */}
           </div>
         </div>
         <Button className="flex items-center justify-center text-lg text-center mb-6 gap-1">

@@ -1,14 +1,18 @@
 "use client";
 
 import Button from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
+
 import { AiOutlineWallet } from "react-icons/ai";
 import { BiSolidBadgeDollar } from "react-icons/bi";
 import { BsFillTagsFill } from "react-icons/bs";
 import { CiCreditCard2 } from "react-icons/ci";
-import { IoMdArrowBack } from "react-icons/io";
+import { IoChevronBackCircleOutline } from "react-icons/io5";
 
 export default function OrderSummary() {
+  const router = useRouter();
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const onHandlePayment = () => {
@@ -18,9 +22,9 @@ export default function OrderSummary() {
 
   return (
     <div className="flex flex-col px-4">
-      <div className="flex items-center">
-        <IoMdArrowBack />
-        <h1 className="text-[40px] font-bold mb-5">Order Summary</h1>
+      <div className="flex items-center mb-5 text-[30px] gap-2">
+        <IoChevronBackCircleOutline onClick={() => router.back()} />
+        <h1 className="font-bold">Order Summary</h1>
       </div>
       <div className="flex gap-5">
         <div id="image" className="h-[110px] w-[30%]">
@@ -36,7 +40,6 @@ export default function OrderSummary() {
               LarryJune
               <BiSolidBadgeDollar />
             </div>
-            <span>Pencil icon</span>
           </div>
           <p>Meet and Greet in Oakland</p>
           <div className="font-bold flex items-center gap-1">
@@ -48,8 +51,6 @@ export default function OrderSummary() {
         <div>TOTAL</div>
         <div>$200</div>
       </div>
-      <Button className="text-xl text-center mb-3">Apply Pay</Button>
-      <Button className="text-xl text-center mb-3">Google Pay</Button>
       <form action="">
         <label htmlFor="card-holder">Card holder</label>
         <input
@@ -59,13 +60,15 @@ export default function OrderSummary() {
           placeholder="Your name"
         />
         <label htmlFor="card-holder">Card number</label>
-        <CiCreditCard2 />
-        <input
-          className="block w-[100%] bg-ff-gray p-3 mt-1 mb-5 font-medium"
-          id="card-holder"
-          type="number"
-          placeholder="XXXX XXXX XXXX XXXX"
-        />
+        <div className="bg-ff-gray flex items-center gap-1 px-4 py-3 mt-1 mb-5">
+          <CiCreditCard2 />
+          <input
+            className="block w-[100%] bg-transparent font-medium"
+            id="card-holder"
+            type="number"
+            placeholder="XXXX XXXX XXXX XXXX"
+          />
+        </div>
         <div className="flex gap-4">
           <div className="flex flex-col w-[50%]">
             <span>Valid until</span>
@@ -87,7 +90,7 @@ export default function OrderSummary() {
         <div className="mb-1">
           <input className="inline-block" type="checkbox" />
           <span className="inline-block ml-2">
-            Accept the Terms and Conditions{" "}
+            Accept the <span className="underline">Terms and Conditions</span>{" "}
           </span>
         </div>
         <div className="mb-3">

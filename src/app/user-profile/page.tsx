@@ -5,6 +5,9 @@ import { FilterList } from "@/components/ui/filter-list";
 import { UserProfileCard } from "@/components/user-profile/user-profile-card";
 import { mockFilters, mockPasses } from "@/mock/user-profile";
 import Image from "next/image";
+import { BiEditAlt } from "react-icons/bi";
+import { IoLocationOutline } from "react-icons/io5";
+import { TbLocation } from "react-icons/tb";
 
 export default function UserProfile() {
   return (
@@ -41,15 +44,27 @@ export default function UserProfile() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <p className="mb-3">Atlanta</p>
-          <p className="mb-3">48% of the way to micro influencer!</p>
+          <div className="flex items-center mb-3">
+            <IoLocationOutline />
+            <p>Atlanta</p>
+          </div>
+          {/* <p className="mb-3">48% of the way to micro influencer!</p>
           <div className="w-[70%]">
             <progress className="progress" value={48} max={100} />
-          </div>
+          </div> */}
         </div>
         <div className="flex justify-evenly my-5 gap-5 text-center">
-          <Button>Edit profile</Button>
-          <Button type={"border"}>Share profile</Button>
+          <Button className="flex justify-center items-center gap-1">
+            <BiEditAlt />
+            Edit profile
+          </Button>
+          <Button
+            className="flex justify-center items-center gap-1"
+            type={"border"}
+          >
+            <TbLocation />
+            Share profile
+          </Button>
         </div>
         <FilterList
           listClassName="grid grid-cols-3 gap-2"

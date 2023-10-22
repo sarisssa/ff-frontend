@@ -10,7 +10,7 @@ interface Props {
   petition: Petition;
 }
 
-export default function PetitionContainer({ petition }: Props) {
+export default function CampaignContainer({ petition }: Props) {
   const {
     id,
     creator,

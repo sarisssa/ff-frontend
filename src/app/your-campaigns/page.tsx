@@ -21,8 +21,8 @@ export default function YourCampaigns() {
           />
           <h1 className="text-2xl ml-4">Your Campaigns</h1>
         </div>
-        <span className="mb-4">48% to the way to micro influencer!</span>
-        <progress className="progress mb-4" value={48} max={100} />
+        {/* <span className="mb-4">48% to the way to micro influencer!</span>
+        <progress className="progress mb-4" value={48} max={100} /> */}
       </div>
       <FilterList
         listClassName="grid grid-cols-1 gap-3"

@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { PropsWithChildren } from "react";
 
 interface Props {
-  type?: "primary" | "border" | "secondary";
+  type?: "primary" | "border" | "secondary" | "blank";
   className?: string;
   onClick?: () => void;
 }
@@ -20,6 +20,7 @@ export default function Button({
         "bg-ff-gray text-ff-dark-gray hover:brightness-90 border-2 border-ff-dark-gray":
           type === "border",
         "text-ff-dark-gray bg-ff-border-light": type === "secondary",
+        "": type === "blank",
       })}
       onClick={onClick}
     >

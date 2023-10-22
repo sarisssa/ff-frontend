@@ -11,7 +11,7 @@ type Props = Pick<
   "coverImage" | "petitionee" | "description" | "fee" | "deadline"
 >;
 
-export default function PetitioneeDetails({
+export default function CampaignDetails({
   coverImage,
   petitionee,
   description,

@@ -1,5 +1,5 @@
 import { Petition } from "@/lib/types";
-import PetitionContainer from "./petition-container";
+import PetitionContainer from "./campaign-container";
 
 interface Props {
   petitions: Petition[];

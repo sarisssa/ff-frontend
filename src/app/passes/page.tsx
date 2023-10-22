@@ -19,10 +19,10 @@ export default function Passes() {
             height={40}
             alt=""
           />
-          <h3>Your Experience Passes</h3>
+          <h3 className="text-xl">Your Badges and Passes</h3>
         </div>
-        <span>48% to the way to micro influencer!</span>
-        <progress className="progress" value={48} max={100} />
+        {/* <span>48% to the way to micro influencer!</span>
+        <progress className="progress" value={48} max={100} /> */}
       </div>
       <FilterList
         listClassName="grid grid-cols-2 gap-3"
